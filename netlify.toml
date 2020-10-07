@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/voys"
+  to = "https://www.voys.nl/over-voys/team/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/spindle"
+  to = "https://wearespindle.com/our-team/"
+  status = 200
+  force = true

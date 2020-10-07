@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f2cc10;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.colleague-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    margin-bottom: 1rem;
+    max-height: 60vh;
+    max-width: 70vh;
+  }
+
+  .image-placeholder {
+    height: 60vh;
+    width: calc(60vh * 0.7145);
+    background: #f2cc10;
+  }
+}
+
+.colleague-name-picker {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 60%;
+  padding-bottom: 3rem;
+
+  > button {
+    margin-top: 0.2rem;
+    min-height: 10%;
+    font-size: 2rem;
+  }
+
+  > button[correct] {
+    background: #0080008a;
+  }
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  > h1 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.highscore-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  font-size: 1.5rem;
+}
+
+.company-selector {
+  display: flex;
+  flex: 0;
+  justify-content: center;
+  margin-bottom: 2rem;
+ }
+
+.company-bar {
+  height: 1%;
+  
+  &.spindle {
+    background-color: #f2cc10;
+  }
+
+  &.mixed {
+    background: repeating-linear-gradient(45deg, #f2cc10, #f2cc10 10px, #2f3490 10px, #2f3490 20px)
+  }
+
+  &.voys{
+    background-color: #2f3490;
+  }
+}
