@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/da551e31-2c19-4506-ad53-7cac536fa2bf/deploy-status)](https://app.netlify.com/sites/mystifying-bell-a81f41/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da551e31-2c19-4506-ad53-7cac536fa2bf/deploy-status)](https://mystifying-bell-a81f41.netlify.app/)
 
 # WhosThatColleague
 
