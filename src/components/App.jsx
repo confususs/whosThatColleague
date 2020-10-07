@@ -58,11 +58,11 @@ export default function App() {
             name: nameNode.innerText.trim(),
             imageSrc: imageSrc.replace('-275x275', ''),
           });
-
-          setVoysPeepz(colleagues);
         }
+
+        setVoysPeepz(colleagues);
       });
-  });
+  }, []);
 
   let colleagues;
 
