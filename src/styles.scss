@@ -28,7 +28,8 @@ body {
 
   > img {
     margin-bottom: 1rem;
-    max-height: 60vh;
+    height: 50vh;
+    max-height: 50vh;
     max-width: 70vh;
   }
 
@@ -43,17 +44,19 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 60%;
-  padding-bottom: 3rem;
+  width: 80%;
+  max-width: 50rem;
+  padding-bottom: 5rem;
 
   > button {
+    height: 5vh;
+    max-height: 80%;
     margin-top: 0.2rem;
-    min-height: 10%;
     font-size: 2rem;
   }
 
   > button[correct] {
-    background: #0080008a;
+    border: solid #2f3490 5px;
   }
 }
 
