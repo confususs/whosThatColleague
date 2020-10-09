@@ -12,7 +12,7 @@ export default function App() {
       return;
     }
 
-    fetch('/spindle')
+    const spindlePromise = fetch('/spindle')
       .then((response) => response.text())
       .then((text) => {
         const parser = new DOMParser();
@@ -30,10 +30,11 @@ export default function App() {
               .src.replace('-214x300', ''),
           });
         }
-        setSpindlePeepz(colleagues);
+
+        return colleagues;
       });
 
-    fetch('/voys')
+    const voysPromise = fetch('/voys')
       .then((response) => response.text())
       .then((text) => {
         const parser = new DOMParser();
@@ -60,8 +61,22 @@ export default function App() {
           });
         }
 
-        setVoysPeepz(colleagues);
+        return colleagues;
       });
+
+    Promise.all([spindlePromise, voysPromise]).then(
+      ([spindleColleagues, voysColleagues]) => {
+        setSpindlePeepz(spindleColleagues);
+        setVoysPeepz(
+          voysColleagues.filter(
+            (voysColleague) =>
+              !spindleColleagues
+                .map((spindleColleague) => spindleColleague.name)
+                .includes(voysColleague.name)
+          )
+        );
+      }
+    );
   }, []);
 
   let colleagues;
