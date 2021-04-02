@@ -46,18 +46,16 @@ export default function App() {
         const colleagues = [];
         for (const colleagueNode of colleagueSection) {
           const nameNode = colleagueNode.querySelector(
-            'div > .c-card__image-title'
+            '.c-card__content > .c-heading'
           );
 
-          nameNode.removeChild(nameNode.querySelector('small'));
-
           const imageSrc = colleagueNode
-            .querySelector('div')
-            .getAttribute('data-bg');
+            .querySelector('.c-card__image')
+            .getAttribute('data-bg').replace("url\('", '').replace("')", '');
 
           colleagues.push({
             name: nameNode.innerText.trim(),
-            imageSrc: imageSrc.replace('-275x275', ''),
+            imageSrc,
           });
         }
 

@@ -26,7 +26,6 @@ export default function ColleagueCard({ options, onChosen }) {
       correct={feedback && choice.correct && ''}
       disabled={feedback}
       onClick={() => {
-        console.log(!!choice.correct);
         setFeedback({
           correctChoice: !!choice.correct,
           name: choice.colleague.name,
