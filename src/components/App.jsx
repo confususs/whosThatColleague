@@ -51,7 +51,9 @@ export default function App() {
 
           const imageSrc = colleagueNode
             .querySelector('.c-card__image')
-            .getAttribute('data-bg').replace("url\('", '').replace("')", '');
+            .style
+            .backgroundImage
+            .replace('url\("', '').replace('")', '');
 
           colleagues.push({
             name: nameNode.innerText.trim(),
